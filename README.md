@@ -16,11 +16,11 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [x] User can pull to refresh. (1pt)
 - [ ] User can load past posts infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/Cayle/Parstagram/blob/main/Parstagram.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Cayle/Parstagram/blob/main/Parstagram2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
