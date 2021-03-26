@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,6 +18,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+//        // Instantiate UIWindow with scene
+//        let window = UIWindow(windowScene: scene)
+//        // Assign window to SceneDelegate window property
+//        self.window = window
+//        // Set initial view controller from Main storyboard as root view controller of UIWindow
+//        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+//        // Present window to screen
+//        self.window?.makeKeyAndVisible()
+        
+        if PFUser.current() != nil {
+            print("yes !!!")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavigationController =  main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            window?.rootViewController = feedNavigationController
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
